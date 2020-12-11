@@ -5,6 +5,7 @@ import Header from './components/Header.js';
 import Home from './components/Home.js';
 import Checkout from './components/Checkout.js';
 import Login from './components/Login.js';
+import Signup from './components/Signup.js'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
                 </Route>
                 <Route path="/login">
                     <Login />
+                </Route>
+                <Route path="/register">
+                    <Signup />
                 </Route>
                 <Route path="/">
                     <Header />

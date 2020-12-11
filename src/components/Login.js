@@ -23,7 +23,7 @@ function Login(){
 					<h5>New to Amazon?</h5>
 				</div>
 				<div className="signup_btn">
-					<Link to="/">
+					<Link to="/register">
 						<button>Create your amazon account</button>
 					</Link>
 				</div>
