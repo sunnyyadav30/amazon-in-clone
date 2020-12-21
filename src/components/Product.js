@@ -11,7 +11,7 @@ function Product({id,title,image,price,rating}) {
 				id: id,
 				title: title,
 				image: image,
-				price: price,
+				price: parseInt(price.replaceAll(',','')),
 				rating: rating
 			}
 		})

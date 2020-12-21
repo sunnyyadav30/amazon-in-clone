@@ -13,6 +13,9 @@
                 width: 100px;
                 filter: invert(1);
             }
+            h2{
+                margin-bottom: 15px;
+            }
         }
         .signUp__formFields{
             padding: 20px;
@@ -20,6 +23,9 @@
             flex-direction: column;
             border: 1px solid #ccc;
             border-radius: 6px;
+            .error{
+                color: red;
+            }
             h2{
                 margin-bottom: 15px;
                 font-weight: 500;

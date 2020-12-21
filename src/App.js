@@ -1,20 +1,35 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header.js';
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import Home from './components/Home.js';
 import Checkout from './components/Checkout.js';
 import Login from './components/Login.js';
-import Signup from './components/Signup.js'
+import Signup from './components/Signup.js';
+import SearchResult from './components/SearchResult'
+import {initialState} from './reducer'
 
 function App() {
   return (
     <Router>
         <div className="app">
             <Switch>
-                <Route path="/checkout">
-                    <Header />
-                    <Checkout />
+                <Route path="/checkout" render={()=>{
+                    if(initialState.isAuthenticated){
+                        return <Checkout />
+                    }
+                    else{
+                        return <Redirect to="/login" />
+                    }
+                }}>
+                </Route>
+                <Route path="/search" render={()=>{
+                    if(!initialState.isAuthenticated){
+                        return <SearchResult />
+                    }
+                    else{
+                        return <Redirect to="/login" />
+                    }
+                }}>
                 </Route>
                 <Route path="/login">
                     <Login />
@@ -22,9 +37,15 @@ function App() {
                 <Route path="/register">
                     <Signup />
                 </Route>
-                <Route path="/">
-                    <Header />
-                    <Home />
+                <Route path="/" render={()=>{
+                    console.log(initialState.isAuthenticated)
+                    if(initialState.isAuthenticated){
+                        return <Home />
+                    }
+                    else{
+                        return <Redirect to="/login" />
+                    }
+                }}>
                 </Route>
             </Switch>
         </div>

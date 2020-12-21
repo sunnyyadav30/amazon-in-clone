@@ -8,6 +8,15 @@
 	align-items: center;
 	flex-direction: column;
 	box-sizing: border-box;
+	a{
+		color: #000;
+		text-decoration: none;
+		margin-bottom: 20px;
+		h2{
+			width: 100%;
+			float: left;
+		}
+	}
 	.logo{
 		width: 300px;
 		text-align: center;
@@ -24,7 +33,10 @@
 		display: flex;
 		flex-direction: column;
 		.login-content{
-			
+			p{
+				color: red;
+				font-size: 14px;
+			}
 			h2{
 				font-weight: 500;
 				margin-bottom: 15px;
@@ -41,6 +53,9 @@
 				padding: 8px;
 				border-radius: 4px;
 				box-sizing: border-box;
+			}
+			.email{
+				margin-bottom: 10px;
 			}
 			input:focus{
 				border-color: #e77600;
