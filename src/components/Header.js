@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import './Header.scss'
 import {Link,useHistory} from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search'
@@ -11,6 +11,7 @@ function Header() {
 	const [{basket},dispatch] = useStateValue();
 	const signOutButton = useRef(null)
 	const cartButton = useRef(null)
+	const [search,setSearch] = useState('')
 	const history = useHistory();
 	const logout = ()=>{
 		initialState.isAuthenticated = false
@@ -32,14 +33,23 @@ function Header() {
 		cartButton.current.style.display = "none"
 		signOutButton.current.style.display = "none"
 	}
+	const searchProduct = ()=>{
+
+	}
+
 	return(
 		<nav className="header" onMouseLeave={hideDropDown}>
 			<Link to="/">
 				<h2>Shop Now</h2>
 			</Link>
 			<div className="header_search">
-				<input type="text" className="header_searchInput"/>
-				<SearchIcon className="header_searchIcon" />
+				<div className="header__searchBox">
+					<input type="text" className="header_searchInput" value={search} onChange={(e)=>setSearch(e.target.value)}/>
+					<div className="header__dropdownList">
+
+					</div>
+				</div>
+				<SearchIcon className="header_searchIcon" onClick={searchProduct}/>
 			</div>
 			<div className="header__nav">
 				<div className="header__link">

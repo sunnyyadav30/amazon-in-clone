@@ -13,6 +13,7 @@
 		text-decoration: none;
 		margin-bottom: 20px;
 		h2{
+			margin-bottom: 15px;
 			width: 100%;
 			float: left;
 		}
@@ -58,15 +59,16 @@
 				margin-bottom: 10px;
 			}
 			input:focus{
-				border-color: #e77600;
-    			box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+				border-color: #b2ebf2;
+    			box-shadow: 0 0 3px 2px #b2ebf2;
 			}
 			button{
-				background-color: #f2c860;
+				background-color: #0097a7;
+    			color: #fff;
 				box-sizing: border-box;
 				width: 100%;
 				outline: 0;
-				border: 1px solid rgb(89, 89, 89);
+				border: 0;
 				padding: 8px;
 				margin: 10px 0;
 				font-weight: 400;
@@ -82,7 +84,9 @@
 			button{
 				box-sizing: border-box;
 				width: 100%;
-				border: 1px solid rgb(89, 89, 89);
+				background-color: #0097a7;
+    			color: #fff;
+				border: 0;
 				outline: 0;
 				border-radius: 4px;
 				padding: 8px;

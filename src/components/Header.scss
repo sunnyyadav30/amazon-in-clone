@@ -20,6 +20,14 @@
 	.header_search{
 		display: flex;
 		flex: 1;
+		opacity: 0;
+		pointer-events: none;
+		.header__searchBox{
+			position: relative;
+			.header__dropdownList{
+				position: absolute;
+			}
+		}
 		.header_searchInput{
 			padding: 10px;
 			outline: 0;

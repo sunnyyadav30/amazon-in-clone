@@ -45,6 +45,10 @@
                     border: 1px solid #444;
                     border-radius: 5px;
                 }
+                input:focus{
+                    border-color: #b2ebf2;
+    			    box-shadow: 0 0 3px 2px #b2ebf2;
+                }
                 p{
                     font-size: 14px;
                     a{
@@ -54,12 +58,12 @@
                 }
             }
             button{
-                background: #f0c14b;
-                border: 1px solid;
+                background-color: #0097a7;
+                color: #fff;
                 padding: 10px;
                 cursor: pointer;
                 border-radius: 5px;
-                border-color: #a88734 #9c7e31 #846a29;
+                border: 0;
             }
         }
     }
