@@ -10,7 +10,7 @@ import {initialState} from './reducer'
 
 function App() {
   return (
-    <Router>
+    <Router basename={'/ecommerce-project'}>
         <div className="app">
             <Switch>
                 <Route path="/checkout" render={()=>{
