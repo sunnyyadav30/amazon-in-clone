@@ -7,12 +7,22 @@ import Login from './components/Login.js';
 import Signup from './components/Signup.js';
 import SearchResult from './components/SearchResult'
 import {initialState} from './reducer'
+import Profile from './components/Profile'
 
 function App() {
   return (
     <Router basename={'/ecommerce-project'}>
         <div className="app">
             <Switch>
+                <Route path="/profile" render={()=>{
+                    if(initialState.isAuthenticated){
+                        return <Profile />
+                    }
+                    else{
+                        return <Redirect to="/login" />
+                    }
+                }}>
+                </Route>
                 <Route path="/checkout" render={()=>{
                     if(initialState.isAuthenticated){
                         return <Checkout />
@@ -23,7 +33,7 @@ function App() {
                 }}>
                 </Route>
                 <Route path="/search" render={()=>{
-                    if(!initialState.isAuthenticated){
+                    if(initialState.isAuthenticated){
                         return <SearchResult />
                     }
                     else{

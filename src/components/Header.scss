@@ -1,5 +1,5 @@
 .header{
-	background-color: #131921;
+	background-color: #006064;
 	display: flex;
 	align-items: center;
 	position: sticky;
@@ -29,7 +29,7 @@
 		.header_searchIcon{
 			padding: 5px;
 			height: 35px !important;
-			background-color: #cd9042;
+			background-color: #80deea;
 			width: 45px;
 		}
 	}
@@ -48,18 +48,33 @@
 				position: relative;
 				.header__signOut{
 					position: absolute;
-					bottom: -55px;
-					background-color: #fff;
-					border-radius: 5px;
+					bottom: -81px;
+					background-color: #80deea;
+					border-radius: 3px;
 					border: 1px solid #ccc;
+					width: 100%;
 					display: none;
+					justify-content: center;
+    				flex-direction: column;
 					cursor: auto;
 					transition: all .3s ease-in-out;
-					button{
+					button,a{
 						cursor: pointer;
 						padding: 8px;
+						background-color: #80deea;
 						border: 0;
+						font-size: 14px;
+						color: #000;
 						outline: 0;
+						width: 100%;
+						text-align: left;
+						transition: all .3s ease-in-out;
+					}
+					button:first-child,a:first-child{
+						border-bottom: 1px solid #fff;
+					}
+					button:hover,a:hover{
+						background-color: #4dd0e1;
 					}
 				}
 				.header__signOut::before{
@@ -71,37 +86,46 @@
 					height: 0;
 					border-left: 8px solid transparent;
 					border-right: 8px solid transparent;
-					border-bottom: 8px solid #8a8a8a;
+					border-bottom: 8px solid #fff;
 				}
 				.header__cart{
 					position: absolute;
-					bottom: -84px;
+					bottom: -80px;
 					background-color: #fff;
 					border-radius: 5px;
 					border: 1px solid #ccc;
 					flex-direction: column;
+					width: 100%;
 					display: none;
 					transition: all .3s ease-in-out;
 					cursor: auto;
 					button{
 						cursor: pointer;
-						padding: 5px;
+						padding: 8px;
 						border: 0;
 						outline: 0;
 						color: #131921;
 						font-size: 14px;
-						background-color: #f4f4f4;
-						border-top: 1px solid #ccc;
+						background-color: #80deea;
+						border-top: 1px solid #fff;
 						border-radius: 0 0 5px 5px;
+						text-align: left;
+					}
+					button:hover{
+						background-color: #4dd0e1;
 					}
 					a{
 						color: #131921;
-						padding: 5px;
+						padding: 8px;
+						font-size: 14px;
 						border-radius: 5px 5px 0 0;
 						border: 0;
-						background-color: #f4f4f4;
+						background-color: #80deea;
 						outline: 0;
 						font-size: 14px;
+					}
+					a:hover{
+						background-color: #4dd0e1;
 					}
 				}
 				.header__cart::before{
@@ -113,14 +137,21 @@
 					height: 0;
 					border-left: 8px solid transparent;
 					border-right: 8px solid transparent;
-					border-bottom: 8px solid #8a8a8a;
+					border-bottom: 8px solid #fff;
 				}
 				.header__optionLineOne{
 					font-size: 10px;
+					display: flex;
+					align-items: center;
+					.MuiSvgIcon-root{
+						font-size: 30px;
+						margin-left: 10px;
+					}
 				}
 				.header__optionLineTwo{
 					font-size: 13px;
-					font-weight: 800;
+					font-weight: 600;
+					margin-top: -8px;
 				}
 				p{
 					font-size: 12px;

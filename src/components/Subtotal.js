@@ -13,13 +13,9 @@ function Subtotal(){
 			<CurrencyFormat
 				renderText = {(value) => (
 					<>
-					<p>
-						Subtotal ({basket.length} items): <strong>₹ {indianCurrencyFormat(getBasketTotal(basket))}</strong>
-					</p>
-					<small className="subtotal_gifts">	
-						<input type="checkbox"  />
-						This order contains gift
-					</small>
+						<p>
+							Subtotal ({basket.length} items): <strong>₹ {indianCurrencyFormat(getBasketTotal(basket))}</strong>
+						</p>
 					</>
 				)}
 				decimalState = {2}

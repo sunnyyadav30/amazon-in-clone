@@ -285,6 +285,11 @@ function reducer(state,action) {
 				user: [...state.user, action.user]
 			}
 			break;
+		case 'EMPTY_CART':
+			return {
+				...state,
+				basket : []
+			}
 		case 'ADD_TO_BASKET':
 			//logic for adding item to basket
 			return {

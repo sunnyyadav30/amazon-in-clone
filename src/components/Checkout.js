@@ -14,7 +14,6 @@ function Checkout() {
 			<Header />
 			<div className="checkout">
 				<div className="checkout_left">
-				<img className="checkout__ad" src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="" />
 				{
 					basket?.length === 0 ? (
 						<div>
@@ -25,6 +24,7 @@ function Checkout() {
 						</div>
 					):(
 						<div>
+							<Subtotal />
 							<h2 className="checkout_title">Your shopping basket</h2>
 							{
 								basket?.map(item=>(
@@ -37,15 +37,10 @@ function Checkout() {
 									/>
 								))
 							}
+							<Subtotal />
 						</div>
 					)}
 				</div>
-					{
-				basket.length > 0 && (
-					<div className="checkout_right">
-						<Subtotal />
-					</div>
-				)}
 			</div>
 		</>
 	)
