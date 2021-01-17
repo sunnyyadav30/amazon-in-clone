@@ -13,4 +13,14 @@
 		z-index: 1;
 		margin: 0 5px 0 5px;
 	}
+	@media(max-width:767px){
+		.home__row{
+			grid-template-columns: 1fr 1fr;	
+		}
+	}
+	@media(max-width:480px){
+		.home__row{
+			grid-template-columns: 1fr;	
+		}
+	}
 }

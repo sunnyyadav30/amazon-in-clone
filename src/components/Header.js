@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, { useRef, useState } from 'react'
 import './Header.scss'
 import {Link,useHistory} from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search'
@@ -52,7 +52,7 @@ function Header() {
 				<SearchIcon className="header_searchIcon" onClick={searchProduct}/>
 			</div>
 			<div className="header__nav">
-				<div className="header__link">
+				<div className="header__link header__link__sm">
 					<div className="header__option" onMouseEnter={showSignOut}>
 						<span className="header__optionLineOne">Hello
 							<Dropdown />
